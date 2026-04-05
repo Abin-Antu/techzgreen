@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-fixed-variant": "#005312",
+            "surface-tint": "#1b6d24",
+            "surface-container-highest": "#e0e4da",
+            "on-primary-fixed": "#002204",
+            "primary": "#0d631b",
+            "on-tertiary-fixed": "#3f001c",
+            "background": "#f7fbf0",
+            "secondary": "#476644",
+            "on-primary-container": "#cbffc2",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#c9ecc1",
+            "on-tertiary-fixed-variant": "#7f2448",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#ffb1c7",
+            "error": "#ba1a1a",
+            "primary-container": "#2e7d32",
+            "on-secondary": "#ffffff",
+            "inverse-surface": "#2d322b",
+            "tertiary": "#923357",
+            "on-tertiary-container": "#ffedf0",
+            "on-error-container": "#93000a",
+            "surface": "#f7fbf0",
+            "on-secondary-fixed-variant": "#304e2e",
+            "on-background": "#181d17",
+            "tertiary-container": "#b14b6f",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#40493d",
+            "outline-variant": "#bfcaba",
+            "surface-container-high": "#e5eadf",
+            "surface-container-low": "#f1f5eb",
+            "secondary-container": "#c6e9be",
+            "outline": "#707a6c",
+            "surface-dim": "#d7dbd2",
+            "surface-bright": "#f7fbf0",
+            "on-secondary-fixed": "#052106",
+            "on-surface": "#181d17",
+            "on-error": "#ffffff",
+            "error-container": "#ffdad6",
+            "surface-container": "#ebefe5",
+            "secondary-fixed-dim": "#add0a6",
+            "on-secondary-container": "#4c6a48",
+            "primary-fixed": "#a3f69c",
+            "tertiary-fixed": "#ffd9e2",
+            "surface-variant": "#e0e4da",
+            "primary-fixed-dim": "#88d982",
+            "inverse-primary": "#88d982",
+            "inverse-on-surface": "#eef2e8"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      background-color: #f7fbf0;
+      color: #181d17;
+      font-family: 'Inter', sans-serif;
+    }
+    .glass-nav {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .asymmetric-hero {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-zinc-900/60 backdrop-blur-xl transition-all duration-300">
+<div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
+<div class="text-2xl font-extrabold font-['Manrope'] text-green-800 dark:text-green-400">TechzGreen</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-green-800 dark:text-green-400 font-bold font-['Manrope'] transition-all duration-300 hover:text-green-700" href="#">Home</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium font-['Manrope'] transition-all duration-300 hover:text-green-700" href="#">Events</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium font-['Manrope'] transition-all duration-300 hover:text-green-700" href="#">Rewards</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium font-['Manrope'] transition-all duration-300 hover:text-green-700" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-full font-semibold tracking-tight transition-transform active:scale-95 shadow-lg shadow-primary/10">
+          Get Started
+        </button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-8 py-20 lg:py-32 max-w-7xl mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<span class="inline-block py-1 px-4 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-widest mb-6">The Circular Economy</span>
+<h1 class="text-6xl md:text-7xl font-extrabold font-headline leading-[1.1] text-on-surface mb-8 tracking-tighter">
+            Cultivating a <br/><span class="text-primary italic">Circular Future</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-lg mb-10 font-body leading-relaxed">
+            Join the community driving real environmental impact. Earn sustainable reward points for every eco-conscious action and trade them for exclusive planet-friendly perks.
+          </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-full font-bold text-lg transition-transform active:scale-95">
+              Start Earning Rewards
+            </button>
+<button class="flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-lg text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">play_circle</span>
+              How it Works
+            </button>
+</div>
+<div class="mt-16 flex items-center gap-8">
+<div>
+<p class="text-3xl font-extrabold text-primary font-headline">12.4k</p>
+<p class="text-sm text-on-surface-variant font-medium">Active Stewards</p>
+</div>
+<div class="w-px h-10 bg-outline-variant/30"></div>
+<div>
+<p class="text-3xl font-extrabold text-primary font-headline">85t</p>
+<p class="text-sm text-on-surface-variant font-medium">Waste Diverted</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="relative aspect-square rounded-[3rem] overflow-hidden rotate-3 shadow-2xl">
+<img alt="Sustainability" class="w-full h-full object-cover scale-110" data-alt="lush green leaves with water droplets and soft morning sunlight filtering through a forest canopy, high detail, organic texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWOeGDuSsaxIQ0Q53dJeCJQyS7sasjGDD-nlA9_clAMpeE10Q-knSXpmgsTcQ_Gqg9m6m-F9uJY63RYqUpUGDL-LqvmPCNBbs4jnsWwrpHdo6E9G83Sc3LC3_TXwNusD94UugB0Qmma-xFoaTNQPNqBd7HYTiLJN9xJxPBXnnJYcIt_hv_h5sGGZWA4xAn1oX889Yqas71NM7hkKymcIF-BArirJM1cGvVK2zyr4JS-VUTElrhHP13DVvkSkQ49bFuIUQ_mBWuXxw"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-2xl shadow-xl max-w-[200px] -rotate-3 border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">eco</span>
+</div>
+<span class="font-bold text-on-surface">+500 pts</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-snug">Awarded for participating in the Beach Cleanup event.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Eco-Rewards Bento Section -->
+<section class="bg-surface-container-low py-24 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h2 class="text-4xl md:text-5xl font-extrabold font-headline text-on-surface tracking-tight">Eco-Rewards</h2>
+<p class="text-on-surface-variant mt-4 text-lg max-w-xl">A gamified approach to planetary restoration. Every action you take feeds back into the ecosystem.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 hover:underline underline-offset-8" href="#">
+            Explore the Rewards Store
+            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-auto md:h-[600px]">
+<!-- Card 1: Main Feature -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded-3xl p-10 flex flex-col justify-between relative overflow-hidden group">
+<div class="z-10">
+<span class="bg-tertiary/10 text-tertiary px-4 py-1 rounded-full text-xs font-bold mb-6 inline-block">MOST POPULAR</span>
+<h3 class="text-3xl font-extrabold font-headline mb-4">Circular Points System</h3>
+<p class="text-on-surface-variant max-w-sm">Scan receipts from partner zero-waste shops, participate in events, and log your compost to earn "Green Credits" automatically.</p>
+</div>
+<div class="mt-8 flex gap-4 z-10">
+<div class="bg-surface-container p-4 rounded-xl flex-1">
+<span class="material-symbols-outlined text-primary mb-2">volunteer_activism</span>
+<p class="font-bold">Engage</p>
+<p class="text-xs text-on-surface-variant">Attend events</p>
+</div>
+<div class="bg-surface-container p-4 rounded-xl flex-1">
+<span class="material-symbols-outlined text-primary mb-2">recycling</span>
+<p class="font-bold">Reduce</p>
+<p class="text-xs text-on-surface-variant">Minimize waste</p>
+</div>
+<div class="bg-surface-container p-4 rounded-xl flex-1">
+<span class="material-symbols-outlined text-primary mb-2">shopping_bag</span>
+<p class="font-bold">Redeem</p>
+<p class="text-xs text-on-surface-variant">Eco-discounts</p>
+</div>
+</div>
+<img class="absolute bottom-0 right-0 w-1/2 opacity-20 group-hover:scale-110 transition-transform duration-700" data-alt="abstract tech visualization of connected green nodes and lines representing a digital ecosystem and data flow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv7FYwTQK8rKlXJY7Wp71pSXHk5bbjNN7d6DoNIAvyoG_l8t6fYLVGmRr6LDoxBTSJABpYE48Bjc732p68bVLH-W0eFxNcYz4oglwb1yrPgPsGyCnYmwx-S1YQwdlruCOOIDZvjfWZW5RHVY69g7fnTBGz_DWaDDRSv5Gp2IBCtrzzZMfaLWl3ed4dXDaji_Ii0V7dnXf8dSD1IdoIJt4YCQx5LSSuAoL_JF-B9swMHDa3_mLx9Vjz3bRZfDO0u0rgsqtE8vVvWic"/>
+</div>
+<!-- Card 2: Vertical Small -->
+<div class="bg-primary text-on-primary rounded-3xl p-10 flex flex-col justify-between shadow-2xl shadow-primary/20">
+<div>
+<span class="material-symbols-outlined text-4xl mb-6">workspace_premium</span>
+<h3 class="text-2xl font-bold font-headline mb-4 leading-tight">Elite Steward Tier</h3>
+<p class="opacity-80 text-sm">Top 5% of participants gain access to early event registration and exclusive artisan workshops.</p>
+</div>
+<button class="w-full py-4 bg-on-primary text-primary font-bold rounded-xl active:scale-95 transition-transform">
+              Join the Elite
+            </button>
+</div>
+<!-- Card 3: Small Bottom -->
+<div class="bg-surface-container-high rounded-3xl p-10 group overflow-hidden relative">
+<h3 class="text-xl font-bold font-headline mb-2">Partner Benefits</h3>
+<p class="text-on-surface-variant text-sm">Get up to 40% off at over 200+ sustainable brands globally.</p>
+<div class="mt-6 flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-surface-container-high bg-zinc-200"></div>
+<div class="w-10 h-10 rounded-full border-2 border-surface-container-high bg-zinc-300"></div>
+<div class="w-10 h-10 rounded-full border-2 border-surface-container-high bg-zinc-400"></div>
+<div class="w-10 h-10 rounded-full border-2 border-surface-container-high bg-primary-fixed flex items-center justify-center text-[10px] font-bold text-primary">+200</div>
+</div>
+</div>
+<!-- Card 4: Long Bottom -->
+<div class="md:col-span-2 bg-secondary-container text-on-secondary-container rounded-3xl p-10 flex items-center justify-between">
+<div class="max-w-md">
+<h3 class="text-2xl font-bold font-headline mb-2">Track Your Impact</h3>
+<p class="text-sm opacity-90">Real-time CO2 offset dashboard integrated into your rewards profile. See the difference your choices make.</p>
+</div>
+<div class="w-32 h-32 rounded-full border-8 border-primary/20 flex items-center justify-center">
+<span class="text-2xl font-extrabold">92%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Eco-Events Section -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-4xl md:text-5xl font-extrabold font-headline text-on-surface tracking-tight mb-4">Upcoming Eco-Events</h2>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Take action locally. Meet like-minded environmentalists and earn points for your participation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Event Card 1 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-none hover:shadow-2xl hover:shadow-on-surface/5 transition-all duration-500">
+<div class="relative h-64 overflow-hidden">
+<img alt="Local Beach Cleanup" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="a group of volunteers wearing gloves picking up plastic waste on a beautiful coastal beach at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcT2m9zMWMkRsSSmwgk9jDNYvojGG7PH5oiaZkVjyVLREgX3jPCTIqgURof7dU_hP19NNyn9enAPZZYhj6UCC2K_ocaaNYXfkWCKQuO-Lse9fT9lPYhRVBZo_QHW6ckD70tkyvAEh3CaimGBkRU-u4RImPsMwc-X3IVq5bJd_zHvZsJw4eiAactMmM67ZaYr0v0lOvwWiOe4qEoUpVkwDXfsdaxI4FDVO5RV9IB13Uj-J4HtJkjWzgkt-h_qHkq6ieSaxKrhqfQds"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-lg text-xs font-bold text-primary">
+              AUG 12
+            </div>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold font-headline mb-3 text-on-surface">Local Beach Cleanup</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Restore our coastlines. Equipment provided. Earn 500 bonus points for attendance.</p>
+<div class="flex items-center justify-between border-t border-outline-variant/10 pt-6">
+<div class="flex items-center gap-2 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                Sunset Bay, CA
+              </div>
+<button class="text-primary font-bold text-sm hover:underline">Register Now</button>
+</div>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-none hover:shadow-2xl hover:shadow-on-surface/5 transition-all duration-500">
+<div class="relative h-64 overflow-hidden">
+<img alt="Zero-Waste Workshop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="neatly arranged eco-friendly household items like glass jars and bamboo brushes on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZDkOftvcanNdkLctwklPsDPwh2qCl-7BfknNZjg_nDpDZaJyeMR1KlhnPeO5IKqbYHRH5_RxCOlNEHtbld-fdHW4mE8OkJznKFZrgY-xsoNyA2MV3ZnhMQ5q2hI1UXuxJdLawKC8q8wGqP9oZjth_RK566cuVZlTkhB9su2lGdrNjxSaJf7M1aIygTWxFkeRfN05UlzVy3vR2xJm-zWj4gCC09Nk02UBPiYTzXvM8XmSz7lUTCNbJ1-XMlaaap9Pkd4V3cus8ZEk"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-lg text-xs font-bold text-primary">
+              AUG 18
+            </div>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold font-headline mb-3 text-on-surface">Zero-Waste Workshop</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Learn practical hacks to eliminate household plastic and master the art of bulk shopping.</p>
+<div class="flex items-center justify-between border-t border-outline-variant/10 pt-6">
+<div class="flex items-center gap-2 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                Community Center
+              </div>
+<button class="text-primary font-bold text-sm hover:underline">Register Now</button>
+</div>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-none hover:shadow-2xl hover:shadow-on-surface/5 transition-all duration-500">
+<div class="relative h-64 overflow-hidden">
+<img alt="Sustainable Fashion Fair" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="colorful vintage clothing hanging on a rack in a sun-drenched loft studio, trendy and ecological" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNjzM_PtXxc9uJfaTVT8KaGjkVvgK-cw8SRgFPC_AQW2rAC-i0EpqMoRaZNcehKiecO8YwxPzKJ-k9VtCP7yhFsc7u-kZ4JuPq14OzVuRpoGwi18vX1ABB1RYZlwvLBqxeWY-sXytPR-1toWJaKdf-psRFIBi8__Ti2vOFx-r0nLtYW6WnCguYbn90hey03its4jqbEMzhhG9inpNP_RkZgMM7uatXQzr3YO8I_UXklv5FUkLKsj-9bHKsWgjyGaDodw_OFtV1Td4"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-lg text-xs font-bold text-primary">
+              AUG 24
+            </div>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold font-headline mb-3 text-on-surface">Sustainable Fashion Fair</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Swap your pre-loved items and discover local designers committed to ethics and slow fashion.</p>
+<div class="flex items-center justify-between border-t border-outline-variant/10 pt-6">
+<div class="flex items-center gap-2 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                TechPark Plaza
+              </div>
+<button class="text-primary font-bold text-sm hover:underline">Register Now</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Metric Feature -->
+<section class="py-24 px-8">
+<div class="max-w-5xl mx-auto bg-surface-container-high rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10">
+<h2 class="text-3xl font-bold font-headline mb-12">Current Community Impact</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex flex-col items-center">
+<span class="text-5xl md:text-7xl font-extrabold text-primary font-headline mb-4">42k</span>
+<span class="text-sm font-bold text-on-surface-variant uppercase tracking-widest">Trees Planted</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-5xl md:text-7xl font-extrabold text-primary font-headline mb-4">1.2m</span>
+<span class="text-sm font-bold text-on-surface-variant uppercase tracking-widest">Liters of Water Saved</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-5xl md:text-7xl font-extrabold text-primary font-headline mb-4">15k</span>
+<span class="text-sm font-bold text-on-surface-variant uppercase tracking-widest">Sustainable Swaps</span>
+</div>
+</div>
+<button class="mt-16 bg-on-surface text-surface px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">
+            Be Part of the Growth
+          </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-zinc-100 dark:bg-zinc-950 w-full py-12 px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto">
+<div class="flex flex-col gap-4">
+<div class="text-xl font-bold font-['Manrope'] text-green-800 dark:text-green-400">TechzGreen</div>
+<p class="text-zinc-500 dark:text-zinc-400 font-['Inter'] text-sm leading-relaxed">
+          Cultivating a circular future through community action and sustainable technology.
+        </p>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 font-headline">Platform</h4>
+<ul class="flex flex-col gap-4">
+<li><a class="text-zinc-500 dark:text-zinc-400 font-['Inter'] text-sm hover:text-green-700 dark:hover:text-green-300 underline-offset-4 hover:underline transition-all" href="#">How it Works</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 font-['Inter'] text-sm hover:text-green-700 dark:hover:text-green-300 underline-offset-4 hover:underline transition-all" href="#">Rewards Catalog</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 font-['Inter'] text-sm hover:text-green-700 dark:hover:text-green-300 underline-offset-4 hover:underline transition-all" href="#">Impact Dashboard</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 font-headline">Legal &amp; Info</h4>
+<ul class="flex flex-col gap-4 text-zinc-500 dark:text-zinc-400 font-['Inter'] text-sm">
+<li><a class="hover:text-green-700 dark:hover:text-green-300 underline-offset-4 hover:underline" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-green-700 dark:hover:text-green-300 underline-offset-4 hover:underline" href="#">Terms of Service</a></li>
+<li><a class="hover:text-green-700 dark:hover:text-green-300 underline-offset-4 hover:underline" href="#">Contact Us</a></li>
+<li><a class="hover:text-green-700 dark:hover:text-green-300 underline-offset-4 hover:underline" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 font-headline">Stay Rooted</h4>
+<p class="text-zinc-500 dark:text-zinc-400 font-['Inter'] text-sm mb-4">Get the latest eco-tips and events in your inbox.</p>
+<div class="flex gap-2">
+<input class="bg-surface-container-low border-none rounded-lg text-sm px-4 py-2 w-full focus:ring-1 focus:ring-primary" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary p-2 rounded-lg">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-zinc-500 dark:text-zinc-400 font-['Inter'] text-sm">© 2024 TechzGreen. Cultivating a circular future.</p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined">eco</span></a>
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined">forum</span></a>
+</div>
+</div>
+</footer>
+</body></html>
