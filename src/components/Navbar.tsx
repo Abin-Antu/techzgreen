@@ -38,9 +38,9 @@ export default function Navbar() {
         <nav className="glass-nav max-w-7xl mx-auto rounded-2xl px-4 sm:px-6">
           <div className="flex justify-between items-center h-14">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 cursor-pointer">
-              <img src={favicon} alt="TechzGreen icon" className="h-8 w-8 object-contain" />
-              <span className="font-black text-lg text-[#1a3d1f] tracking-tight" style={{fontFamily:'Outfit, sans-serif'}}>
+            <Link to="/" className="flex items-center gap-1.5 sm:gap-2 cursor-pointer">
+              <img src={favicon} alt="TechzGreen icon" className="h-7 w-7 sm:h-8 sm:w-8 object-contain" />
+              <span className="font-black text-base sm:text-lg text-[#1a3d1f] tracking-tight" style={{fontFamily:'Outfit, sans-serif'}}>
                 Techz<span className="text-[#2e7d32]">Green</span>
               </span>
             </Link>
@@ -64,7 +64,7 @@ export default function Navbar() {
             {/* Right Actions */}
             <div className="flex items-center gap-2">
               {/* Cart */}
-              <Link to="/cart" className="relative p-2 rounded-lg hover:bg-[rgba(46,125,50,0.1)] text-[#2d4a30] hover:text-[#1b5e20] transition-colors cursor-pointer">
+              <Link to="/cart" className="relative p-2.5 rounded-lg hover:bg-[rgba(46,125,50,0.1)] text-[#2d4a30] hover:text-[#1b5e20] transition-colors cursor-pointer">
                 <ShoppingCart className="w-5 h-5" />
                 {cartItemCount > 0 && (
                   <span className="absolute -top-0.5 -right-0.5 bg-[#ffb300] text-black text-xs font-black w-4 h-4 rounded-full flex items-center justify-center leading-none">
@@ -89,7 +89,8 @@ export default function Navbar() {
                   {/* Mobile hamburger */}
                   <button
                     onClick={() => setMobileMenuOpen(o => !o)}
-                    className="sm:hidden p-2 rounded-lg text-[#2d4a30] hover:bg-[rgba(46,125,50,0.1)] transition-colors cursor-pointer"
+                    aria-label="Toggle menu"
+                    className="sm:hidden p-2.5 rounded-lg text-[#2d4a30] hover:bg-[rgba(46,125,50,0.1)] transition-colors cursor-pointer"
                   >
                     {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                   </button>

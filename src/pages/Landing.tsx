@@ -38,16 +38,16 @@ export default function Landing() {
   return (
     <div className="fade-in">
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden pt-6 pb-20 px-4">
+      <section className="relative overflow-hidden pt-6 pb-12 sm:pb-16 lg:pb-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Copy */}
-            <div className="space-y-6">
+            <div className="space-y-5 sm:space-y-6">
               <span className="section-label">
                 <Leaf className="w-3.5 h-3.5" />
                 Eco Rewards Platform
               </span>
-              <h1 className="text-5xl lg:text-6xl font-black text-[#1a3d1f] leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#1a3d1f] leading-tight">
                 Turn Waste Into
                 <br />
                 <span
@@ -64,7 +64,7 @@ export default function Landing() {
                 <p className="text-base font-bold text-[#2e7d32]">
                   Welcome to TechzGreen
                 </p>
-                <p className="text-lg text-[#5f7a60] leading-relaxed">
+                <p className="text-base sm:text-lg text-[#5f7a60] leading-relaxed">
                   At TechzGreen, innovation and sustainability intertwine,
                   shaping eco-friendly solutions. Our mission: transform plastic
                   waste into purposeful products, fostering a circular economy
@@ -86,7 +86,7 @@ export default function Landing() {
                 </a>
               </div>
               {/* Stats row */}
-              <div className="flex gap-6 pt-4">
+              <div className="flex flex-wrap gap-4 sm:gap-6 pt-4">
                 {[
                   ["1,200+", "Members"],
                   ["4.5T", "Waste Collected"],
@@ -113,7 +113,7 @@ export default function Landing() {
               <img
                 src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=900"
                 alt="Eco-friendly waste disposal"
-                className="relative z-10 rounded-3xl shadow-2xl w-full object-cover h-[420px]"
+                className="relative z-10 rounded-3xl shadow-2xl w-full object-cover h-[280px] sm:h-[360px] lg:h-[420px]"
               />
               {/* Floating card */}
               <div className="absolute -bottom-5 -left-4 z-20 glass-panel px-4 py-3 flex items-center gap-3">
@@ -156,18 +156,18 @@ export default function Landing() {
       </div>
 
       {/* ── How It Works ── */}
-      <section id="about" className="py-20 px-4">
+      <section id="about" className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10 sm:mb-14">
             <span className="section-label mb-4 inline-flex">Our Process</span>
-            <h2 className="text-4xl font-black text-[#1a3d1f] mt-4">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1a3d1f] mt-4">
               Three Steps to Go Green
             </h2>
             <p className="text-[#5f7a60] mt-3 max-w-xl mx-auto">
               Simple, rewarding, and impactful. Here's how TechzGreen works.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 icon: <Upload className="w-7 h-7 text-[#2e7d32]" />,
@@ -188,7 +188,7 @@ export default function Landing() {
                 desc: "Admin verifies and rewards your points. Redeem them for eco products!",
               },
             ].map(({ icon, step, title, desc }) => (
-              <div key={step} className="glass-card p-8 cursor-default">
+              <div key={step} className="glass-card p-6 sm:p-8 cursor-default">
                 <div className="flex items-start gap-4 mb-5">
                   <div className="bg-[rgba(46,125,50,0.08)] p-3 rounded-2xl border border-[rgba(46,125,50,0.12)]">
                     {icon}
@@ -211,12 +211,12 @@ export default function Landing() {
       </section>
 
       {/* ── Upcoming Events ── */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-end justify-between mb-10">
+          <div className="flex items-end justify-between mb-8 sm:mb-10 gap-4">
             <div>
               <span className="section-label mb-3 inline-flex">Community</span>
-              <h2 className="text-4xl font-black text-[#1a3d1f] mt-3">
+              <h2 className="text-3xl sm:text-4xl font-black text-[#1a3d1f] mt-3">
                 Upcoming Eco-Events
               </h2>
             </div>
@@ -228,7 +228,7 @@ export default function Landing() {
             </Link>
           </div>
           {events.length === 0 ? (
-            <div className="glass-panel p-12 text-center">
+            <div className="glass-panel p-6 sm:p-8 lg:p-12 text-center">
               <Calendar className="w-12 h-12 text-[rgba(46,125,50,0.25)] mx-auto mb-3" />
               <p className="text-[#5f7a60] font-medium">
                 No upcoming events yet.
@@ -238,7 +238,7 @@ export default function Landing() {
               </p>
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {events.map((event: any) => (
                 <div
                   key={event.id}
@@ -284,15 +284,15 @@ export default function Landing() {
       </section>
 
       {/* ── Product Catalog ── */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-end justify-between mb-10">
+          <div className="flex items-end justify-between mb-8 sm:mb-10 gap-4">
             <div>
               <span className="section-label mb-3 inline-flex">
                 <ShoppingBag className="w-3.5 h-3.5" />
                 Shop
               </span>
-              <h2 className="text-4xl font-black text-[#1a3d1f] mt-3">
+              <h2 className="text-3xl sm:text-4xl font-black text-[#1a3d1f] mt-3">
                 Eco-Rewards Catalog
               </h2>
             </div>
@@ -304,7 +304,7 @@ export default function Landing() {
             </Link>
           </div>
           {products.length === 0 ? (
-            <div className="glass-panel p-12 text-center">
+            <div className="glass-panel p-6 sm:p-8 lg:p-12 text-center">
               <ShoppingBag className="w-12 h-12 text-[rgba(46,125,50,0.3)] mx-auto mb-3" />
               <p className="text-[#5f7a60] font-medium">
                 Products coming soon. Check back later!
@@ -314,7 +314,7 @@ export default function Landing() {
               </p>
             </div>
           ) : (
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {products.map((product) => (
                 <div
                   key={product.id}
@@ -355,13 +355,13 @@ export default function Landing() {
       </section>
 
       {/* ── CTA Banner ── */}
-      <section className="py-16 px-4 pb-24">
+      <section className="py-12 sm:py-16 px-4 pb-20 sm:pb-24">
         <div className="max-w-7xl mx-auto">
-          <div className="glass-panel-dark p-12 text-center relative overflow-hidden">
+          <div className="glass-panel-dark p-6 sm:p-8 lg:p-12 text-center relative overflow-hidden">
             <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/leaves.png')]"></div>
             <div className="relative z-10">
               <Leaf className="w-12 h-12 text-[#ffb300] mx-auto mb-4" />
-              <h2 className="text-4xl font-black text-white mb-4">
+              <h2 className="text-3xl sm:text-4xl font-black text-white mb-4">
                 Ready to Make a Difference?
               </h2>
               <p className="text-[rgba(200,230,201,0.9)] mb-8 max-w-lg mx-auto">

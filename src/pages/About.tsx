@@ -35,18 +35,18 @@ export default function About() {
     <div className="fade-in">
 
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden pt-10 pb-20 px-4">
+      <section className="relative overflow-hidden pt-6 sm:pt-10 pb-12 sm:pb-16 lg:pb-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="space-y-5 sm:space-y-6">
               <span className="section-label"><Leaf className="w-3.5 h-3.5" />About Us</span>
-              <h1 className="text-5xl lg:text-6xl font-black text-[#1a3d1f] leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#1a3d1f] leading-tight">
                 TechzGreen's Visionary<br />
                 <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(135deg, #2e7d32, #4caf50)' }}>
                   Journey To A Greener Tomorrow
                 </span>
               </h1>
-              <p className="text-lg text-[#5f7a60] leading-relaxed max-w-lg">
+              <p className="text-base sm:text-lg text-[#5f7a60] leading-relaxed max-w-lg">
                 TechzGreen pioneers a greener future by transforming plastic waste into purposeful products, championing sustainability, quality, and innovation in crafting eco-friendly solutions.
               </p>
               <Link to="/signup" className="btn-primary inline-flex items-center gap-2">
@@ -59,16 +59,16 @@ export default function About() {
               <img
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=600"
                 alt="Recycling facility"
-                className="rounded-3xl object-cover h-56 w-full shadow-xl"
+                className="rounded-3xl object-cover h-40 sm:h-48 lg:h-56 w-full shadow-xl"
               />
               <img
                 src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=600"
                 alt="Waste management"
-                className="rounded-3xl object-cover h-56 w-full shadow-xl mt-8"
+                className="rounded-3xl object-cover h-40 sm:h-48 lg:h-56 w-full shadow-xl mt-8"
               />
               {/* Stat badge */}
               <div className="col-span-2 flex justify-center -mt-4">
-                <div className="glass-panel px-6 py-3 flex items-center gap-4 w-fit">
+                <div className="glass-panel px-4 sm:px-6 py-3 flex items-center gap-3 sm:gap-4 w-fit">
                   <div className="text-center">
                     <p className="text-3xl font-black text-[#2e7d32]" style={{ fontFamily: 'Outfit,sans-serif' }}>32+</p>
                     <p className="text-xs text-[#5f7a60] font-semibold">Years Of Experience</p>
@@ -86,12 +86,12 @@ export default function About() {
       </section>
 
       {/* ── Who We Are ── */}
-      <section className="py-20 px-4 bg-[rgba(46,125,50,0.03)]">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 bg-[rgba(46,125,50,0.03)]">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="space-y-5 sm:space-y-6">
               <span className="section-label">Who We Are</span>
-              <h2 className="text-4xl font-black text-[#1a3d1f] leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-black text-[#1a3d1f] leading-tight">
                 Sustainability Pioneers: Transforming Plastic Waste into Purposeful Innovation.
               </h2>
               <p className="text-[#5f7a60] leading-relaxed">
@@ -129,17 +129,17 @@ export default function About() {
       </section>
 
       {/* ── Mission & Vision ── */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10 sm:mb-12">
             <span className="section-label mb-4 inline-flex"><Leaf className="w-3.5 h-3.5" />A Promise For Future</span>
-            <h2 className="text-4xl font-black text-[#1a3d1f] mt-4">Welcome to TechzGreen</h2>
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1a3d1f] mt-4">Welcome to TechzGreen</h2>
             <p className="text-[#5f7a60] mt-3 max-w-2xl mx-auto">
               At TechzGreen, innovation and sustainability intertwine, shaping eco-friendly solutions. Our mission: transform plastic waste into purposeful products, fostering a circular economy while championing quality and innovation.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 gap-6">
-            <div className="glass-card p-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="glass-card p-6 sm:p-8">
               <div className="bg-[rgba(46,125,50,0.1)] w-12 h-12 rounded-2xl flex items-center justify-center mb-5 border border-[rgba(46,125,50,0.15)]">
                 <Recycle className="w-6 h-6 text-[#2e7d32]" />
               </div>
@@ -148,7 +148,7 @@ export default function About() {
                 At TechzGreen, our mission is to pioneer sustainable solutions by transforming plastic waste into purposeful, eco-friendly products — making recycling simple, effective, and rewarding for communities, businesses, and industries across Kerala and beyond, while reducing landfill waste and creating sustainable value today.
               </p>
             </div>
-            <div className="glass-card p-8">
+            <div className="glass-card p-6 sm:p-8">
               <div className="bg-[rgba(255,179,0,0.12)] w-12 h-12 rounded-2xl flex items-center justify-center mb-5 border border-[rgba(255,179,0,0.2)]">
                 <Star className="w-6 h-6 text-[#ffb300]" />
               </div>
@@ -162,18 +162,18 @@ export default function About() {
       </section>
 
       {/* ── Services ── */}
-      <section className="py-20 px-4 bg-[rgba(46,125,50,0.03)]">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 bg-[rgba(46,125,50,0.03)]">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10 sm:mb-14">
             <span className="section-label mb-4 inline-flex">Our Services</span>
-            <h2 className="text-4xl font-black text-[#1a3d1f] mt-4">Explore Our Offered Solutions</h2>
+            <h2 className="text-3xl sm:text-4xl font-black text-[#1a3d1f] mt-4">Explore Our Offered Solutions</h2>
             <p className="text-[#5f7a60] mt-3 max-w-xl mx-auto">
               Explore our diverse range of eco-conscious solutions, designed to fit your needs and support sustainable environmental practices.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {services.map(({ icon, title, desc }) => (
-              <div key={title} className="glass-card p-8 flex gap-6">
+              <div key={title} className="glass-card p-6 sm:p-8 flex flex-col sm:flex-row gap-4 sm:gap-6">
                 <div className="bg-[rgba(46,125,50,0.08)] w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 border border-[rgba(46,125,50,0.12)]">
                   {icon}
                 </div>
@@ -188,13 +188,13 @@ export default function About() {
       </section>
 
       {/* ── Milestone banner ── */}
-      <section className="py-16 px-4 pb-24">
+      <section className="py-12 sm:py-16 px-4 pb-20 sm:pb-24">
         <div className="max-w-7xl mx-auto">
-          <div className="glass-panel-dark p-12 text-center relative overflow-hidden">
+          <div className="glass-panel-dark p-6 sm:p-8 lg:p-12 text-center relative overflow-hidden">
             <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/leaves.png')]" />
             <div className="relative z-10">
               <Leaf className="w-12 h-12 text-[#ffb300] mx-auto mb-4" />
-              <h2 className="text-3xl font-black text-white mb-4">
+              <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">
                 An Eco-Revolution: Celebrating a Proud Milestone
               </h2>
               <p className="text-[rgba(200,230,201,0.9)] mb-8 max-w-2xl mx-auto">

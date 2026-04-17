@@ -80,13 +80,13 @@ export default function Events() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10 fade-in">
+    <div className="max-w-7xl mx-auto px-4 py-8 sm:py-10 fade-in">
       {/* Header */}
-      <div className="glass-panel-dark p-10 mb-10 relative overflow-hidden">
+      <div className="glass-panel-dark p-6 sm:p-8 lg:p-10 mb-8 sm:mb-10 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/leaves.png')]"></div>
         <div className="relative z-10">
           <span className="section-label !bg-white/15 !border-white/25 !text-white mb-4 inline-flex"><Leaf className="w-3.5 h-3.5" />Community</span>
-          <h1 className="text-4xl font-black text-white mt-3 mb-3">Eco Events</h1>
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-3">Eco Events</h1>
           <p className="text-[rgba(200,230,201,0.85)] max-w-lg">
             Join community-driven events that make a real difference. From clean-up drives to recycling workshops — we'd love to see you there!
           </p>
@@ -94,13 +94,13 @@ export default function Events() {
       </div>
 
       {events.length === 0 ? (
-        <div className="glass-panel p-20 text-center">
+        <div className="glass-panel p-10 sm:p-16 lg:p-20 text-center">
           <Calendar className="w-16 h-16 text-[rgba(46,125,50,0.2)] mx-auto mb-4" />
           <p className="text-[#5f7a60] font-semibold text-lg">No upcoming events</p>
           <p className="text-xs text-[#5f7a60] mt-1 opacity-70">Check back soon — the admin will post events here.</p>
         </div>
       ) : (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {events.map(event => {
             const isRegistered = registeredIds.includes(event.id);
             const isSuccess = successId === event.id;
@@ -111,7 +111,7 @@ export default function Events() {
             return (
               <div key={event.id} className="glass-card overflow-hidden flex flex-col cursor-default">
                 {/* Poster */}
-                <div className="relative h-52 overflow-hidden">
+                <div className="relative h-44 sm:h-52 overflow-hidden">
                   <img
                     src={event.poster_url || 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=600'}
                     alt={event.title}

@@ -48,6 +48,8 @@
       radial-gradient(circle at 60% 40%, rgba(46, 125, 50, 0.06) 0%, transparent 40%);
     background-attachment: fixed;
     min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
     font-family: 'Nunito', 'Inter', system-ui, sans-serif;
     color: #2d4a30;
     -webkit-font-smoothing: antialiased;
@@ -252,41 +254,22 @@
     .page-container { padding-left: 2rem; padding-right: 2rem; }
   }
 
-  /* Mobile: scale down h1 */
+  /* Mobile tweaks that do NOT fight utility-class responsive scales */
   @media (max-width: 639px) {
-    h1 { font-size: 2rem !important; line-height: 1.2 !important; }
-    h2 { font-size: 1.5rem !important; }
-
-    /* Full-width buttons on mobile */
-    .btn-primary, .btn-accent {
-      width: 100%;
-      justify-content: center;
-      text-align: center;
-    }
-
-    /* Glass panels – less padding on mobile */
-    .glass-panel { padding: 1.25rem !important; border-radius: 1rem !important; }
-    .glass-card  { border-radius: 0.875rem !important; }
-
-    /* Stack admin header stats vertically */
+    /* Stack admin header stats horizontally-wrapped */
     .admin-stats-row {
-      flex-direction: column;
-      align-items: flex-start !important;
-      gap: 0.75rem !important;
-    }
-    .admin-stats-row > div {
-      flex-direction: row !important;
+      width: 100%;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.5rem !important;
     }
 
-    /* Input glass – bigger tap target */
+    /* iOS zoom guard: prevent auto-zoom on input focus (need 16px min) */
     .input-glass { padding: 0.75rem 1rem; font-size: 1rem; }
   }
 
   /* ── Touch-friendly tap targets ── */
   @media (hover: none) and (pointer: coarse) {
-    button, a { min-height: 44px; }
+    button, a, [role="button"] { min-height: 44px; }
     .btn-primary, .btn-accent { padding: 0.75rem 1.5rem; }
     .input-glass { padding: 0.75rem 1rem; }
   }

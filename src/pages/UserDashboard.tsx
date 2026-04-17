@@ -146,7 +146,7 @@ export default function UserDashboard() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10 fade-in pb-24 sm:pb-10">
+    <div className="max-w-7xl mx-auto px-4 py-8 sm:py-10 fade-in pb-24 sm:pb-10">
       {/* Hero Header */}
       <div className="glass-panel-dark p-6 sm:p-8 mb-8 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/leaves.png')]" />
@@ -156,18 +156,18 @@ export default function UserDashboard() {
               <Leaf className="text-[#66bb6a] w-5 h-5" />
               <span className="text-[rgba(200,230,201,0.8)] text-sm font-semibold">Welcome back</span>
             </div>
-            <h1 className="text-3xl font-black text-white">{user.email?.split('@')[0]}</h1>
+            <h1 className="text-2xl sm:text-3xl font-black text-white break-all">{user.email?.split('@')[0]}</h1>
             <p className="text-[rgba(200,230,201,0.7)] mt-1 text-sm">Keep up the great work saving our planet!</p>
           </div>
-          <div className="stat-box-dark px-8 py-5 text-center">
+          <div className="stat-box-dark px-6 sm:px-8 py-4 sm:py-5 text-center w-full sm:w-auto">
             <Star className="w-6 h-6 text-[#ffb300] mx-auto mb-1 fill-[#ffb300]" />
-            <p className="stat-num text-4xl">{totalPoints}</p>
+            <p className="stat-num text-3xl sm:text-4xl">{totalPoints}</p>
             <p className="stat-label tracking-wide">Green Points</p>
           </div>
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Quick Actions */}
         <div className="glass-panel p-6 sm:p-8">
           <h2 className="text-xl font-bold text-[#1a3d1f] mb-6">Quick Actions</h2>

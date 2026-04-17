@@ -141,9 +141,9 @@ export default function Checkout() {
   const inputClass = "input-glass";
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-10 fade-in">
+    <div className="max-w-3xl mx-auto px-4 py-8 sm:py-10 fade-in">
       {/* Progress Bar */}
-      <div className="flex items-center gap-3 mb-10">
+      <div className="flex items-center gap-3 mb-8 sm:mb-10">
         <div className={`flex items-center justify-center w-10 h-10 rounded-full font-bold text-sm transition-all ${step >= 1 ? 'bg-[#2e7d32] text-white shadow' : 'bg-[rgba(46,125,50,0.1)] text-[#5f7a60]'}`}>1</div>
         <div className={`h-1 flex-grow rounded-full transition-all ${step >= 2 ? 'bg-[#2e7d32]' : 'bg-[rgba(46,125,50,0.15)]'}`}></div>
         <div className={`flex items-center justify-center w-10 h-10 rounded-full font-bold text-sm transition-all ${step >= 2 ? 'bg-[#2e7d32] text-white shadow' : 'bg-[rgba(46,125,50,0.1)] text-[#5f7a60]'}`}>2</div>
@@ -151,8 +151,8 @@ export default function Checkout() {
 
       {/* Step 1: Address */}
       {step === 1 && (
-        <div className="glass-panel p-8">
-          <h2 className="text-2xl font-bold text-[#1a3d1f] mb-6 flex items-center gap-2">
+        <div className="glass-panel p-6 sm:p-8">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#1a3d1f] mb-6 flex items-center gap-2">
             <MapPin className="text-[#2e7d32]" /> Shipping Address
           </h2>
           {savedAddressLoaded && (
@@ -172,7 +172,7 @@ export default function Checkout() {
                   className={inputClass} />
               </div>
             ))}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[{ label: 'City', key: 'city' }, { label: 'State', key: 'state' }].map(({ label, key }) => (
                 <div key={key}>
                   <label className="block text-sm font-bold text-[#2d4a30] mb-1.5">{label}</label>
@@ -273,7 +273,7 @@ export default function Checkout() {
             )}
             <div className="flex justify-between items-center">
               <span className="text-[#5f7a60] font-semibold">Total to Pay</span>
-              <span className="text-3xl font-black text-[#1a3d1f]" style={{fontFamily:'Outfit,sans-serif'}}>${finalAmount.toFixed(2)}</span>
+              <span className="text-2xl sm:text-3xl font-black text-[#1a3d1f]" style={{fontFamily:'Outfit,sans-serif'}}>${finalAmount.toFixed(2)}</span>
             </div>
           </div>
 

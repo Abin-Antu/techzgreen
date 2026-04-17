@@ -59,16 +59,16 @@ export default function EventRegistrationModal({ event, onClose, onSuccess }: Pr
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
 
       {/* Modal */}
-      <div className="relative z-10 w-full max-w-lg glass-panel p-0 overflow-hidden" onClick={e => e.stopPropagation()}>
+      <div className="relative z-10 w-full max-w-lg max-h-[90vh] overflow-y-auto glass-panel p-0" onClick={e => e.stopPropagation()}>
         {/* Header with poster */}
         {event.poster_url && (
-          <div className="relative h-40 overflow-hidden">
+          <div className="relative h-32 sm:h-40 overflow-hidden">
             <img src={event.poster_url} alt={event.title} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50"></div>
           </div>
         )}
 
-        <div className="p-6">
+        <div className="p-5 sm:p-6">
           <div className="flex items-start justify-between mb-4">
             <div>
               <h2 className="text-xl font-black text-[#1a3d1f]">{event.title}</h2>

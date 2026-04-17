@@ -72,8 +72,8 @@ export default function Footer() {
       {/* Amber top accent line */}
       <div style={{ height: 3, background: 'linear-gradient(90deg, #ffb300, #ff8f00, #ffb300)' }} />
 
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div className="max-w-7xl mx-auto px-4 py-12 sm:py-14 lg:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
 
           {/* Brand */}
           <div className="space-y-5">
@@ -87,7 +87,7 @@ export default function Footer() {
             {/* Social icons */}
             <div>
               <p className="text-[#81c784] text-xs font-bold uppercase tracking-widest mb-3">Follow Us</p>
-              <div className="flex gap-2.5">
+              <div className="flex gap-2.5 flex-wrap">
                 {socialLinks.map(({ label, href, icon }) => (
                   <a
                     key={label}
@@ -95,7 +95,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="w-9 h-9 rounded-xl flex items-center justify-center text-[#a5d6a7] hover:text-white hover:bg-[#ffb300] transition-all duration-200"
+                    className="w-11 h-11 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center text-[#a5d6a7] hover:text-white hover:bg-[#ffb300] transition-all duration-200"
                     style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.1)' }}
                   >
                     {icon}
@@ -134,7 +134,7 @@ export default function Footer() {
             </div>
             <ul className="space-y-4">
               <li className="flex gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[rgba(255,179,0,0.15)] flex items-center justify-center flex-shrink-0 border border-[rgba(255,179,0,0.25)]">
+                <div className="w-10 h-10 sm:w-8 sm:h-8 rounded-lg bg-[rgba(255,179,0,0.15)] flex items-center justify-center flex-shrink-0 border border-[rgba(255,179,0,0.25)]">
                   <MapPin className="w-4 h-4 text-[#ffb300]" />
                 </div>
                 <span className="text-[#a5d6a7] text-sm leading-relaxed pt-1">
@@ -144,7 +144,7 @@ export default function Footer() {
                 </span>
               </li>
               <li className="flex gap-3 items-center">
-                <div className="w-8 h-8 rounded-lg bg-[rgba(255,179,0,0.15)] flex items-center justify-center flex-shrink-0 border border-[rgba(255,179,0,0.25)]">
+                <div className="w-10 h-10 sm:w-8 sm:h-8 rounded-lg bg-[rgba(255,179,0,0.15)] flex items-center justify-center flex-shrink-0 border border-[rgba(255,179,0,0.25)]">
                   <Mail className="w-4 h-4 text-[#ffb300]" />
                 </div>
                 <a
@@ -155,7 +155,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex gap-3 items-center">
-                <div className="w-8 h-8 rounded-lg bg-[rgba(255,179,0,0.15)] flex items-center justify-center flex-shrink-0 border border-[rgba(255,179,0,0.25)]">
+                <div className="w-10 h-10 sm:w-8 sm:h-8 rounded-lg bg-[rgba(255,179,0,0.15)] flex items-center justify-center flex-shrink-0 border border-[rgba(255,179,0,0.25)]">
                   <Phone className="w-4 h-4 text-[#ffb300]" />
                 </div>
                 <a

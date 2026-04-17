@@ -30,12 +30,12 @@ export default function Shop() {
   }
 
   return (
-    <div className="min-h-screen py-10 px-4 fade-in">
+    <div className="min-h-screen py-8 sm:py-10 px-4 fade-in">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="mb-10">
+        <div className="mb-8 sm:mb-10">
           <span className="section-label mb-4 inline-flex"><ShoppingBag className="w-3.5 h-3.5" />Eco Shop</span>
-          <h1 className="text-5xl font-black text-[#1a3d1f] mt-3">Our Eco Products</h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1a3d1f] mt-3">Our Eco Products</h1>
           <p className="text-[#5f7a60] mt-2 max-w-lg">Handpicked sustainable products you can buy or redeem using your earned green points.</p>
         </div>
 
@@ -59,14 +59,14 @@ export default function Shop() {
             </p>
           </div>
         ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map(product => (
               <div key={product.id} className="glass-card overflow-hidden flex flex-col group cursor-default">
                 <div className="overflow-hidden relative">
                   <img
                     src={product.image_url || 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=500&q=80'}
                     alt={product.name}
-                    className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {product.stock !== undefined && product.stock <= 0 && (
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center">

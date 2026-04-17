@@ -37,7 +37,7 @@ export default function BannerCarousel() {
   return (
     <div className="relative overflow-hidden mx-4 mb-2 rounded-2xl shadow-lg" style={{maxWidth:'calc(100% - 2rem)', margin:'0 1rem 1.5rem'}}>
       {/* Slide */}
-      <div className="relative h-48 md:h-64">
+      <div className="relative h-40 sm:h-48 md:h-56 lg:h-64">
         <img
           src={banner.image_url}
           alt={banner.title}
@@ -46,10 +46,10 @@ export default function BannerCarousel() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
         {/* Content */}
-        <div className="absolute inset-0 flex flex-col justify-center px-8">
+        <div className="absolute inset-0 flex flex-col justify-center px-5 sm:px-8">
           <span className="section-label mb-2 inline-flex w-fit !bg-white/20 !border-white/30 !text-white text-xs">Announcement</span>
-          <h3 className="text-2xl md:text-3xl font-black text-white mb-1 drop-shadow">{banner.title}</h3>
-          {banner.subtitle && <p className="text-white/80 text-sm md:text-base">{banner.subtitle}</p>}
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white mb-1 drop-shadow">{banner.title}</h3>
+          {banner.subtitle && <p className="text-white/80 text-xs sm:text-sm md:text-base">{banner.subtitle}</p>}
           {banner.link_url && (
             <a href={banner.link_url} target="_blank" rel="noopener noreferrer"
               className="mt-3 inline-flex items-center gap-1.5 btn-accent text-xs w-fit">
@@ -63,11 +63,13 @@ export default function BannerCarousel() {
       {banners.length > 1 && (
         <>
           <button onClick={() => setCurrent(c => (c - 1 + banners.length) % banners.length)}
-            className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-1.5 rounded-full transition-colors cursor-pointer backdrop-blur-sm">
+            aria-label="Previous slide"
+            className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2.5 sm:p-1.5 rounded-full transition-colors cursor-pointer backdrop-blur-sm">
             <ChevronLeft className="w-4 h-4" />
           </button>
           <button onClick={() => setCurrent(c => (c + 1) % banners.length)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-1.5 rounded-full transition-colors cursor-pointer backdrop-blur-sm">
+            aria-label="Next slide"
+            className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2.5 sm:p-1.5 rounded-full transition-colors cursor-pointer backdrop-blur-sm">
             <ChevronRight className="w-4 h-4" />
           </button>
           {/* Dots */}

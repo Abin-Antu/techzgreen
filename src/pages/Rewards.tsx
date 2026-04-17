@@ -70,28 +70,28 @@ export default function Rewards() {
     .reduce((sum: number, s: any) => sum + (s.points_awarded || 0), 0);
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-10 fade-in">
+    <div className="max-w-5xl mx-auto px-4 py-8 sm:py-10 fade-in">
       {/* Hero Banner */}
-      <div className="glass-panel-dark p-10 mb-10 relative overflow-hidden">
+      <div className="glass-panel-dark p-6 sm:p-8 lg:p-10 mb-8 sm:mb-10 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/leaves.png')]"></div>
         <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <div className="flex items-center gap-3 mb-3">
-              <Leaf className="text-[#ffb300] w-8 h-8" />
-              <h1 className="text-3xl font-black text-white">Earn Green Points</h1>
+              <Leaf className="text-[#ffb300] w-7 h-7 sm:w-8 sm:h-8" />
+              <h1 className="text-2xl sm:text-3xl font-black text-white">Earn Green Points</h1>
             </div>
             <p className="text-[rgba(200,230,201,0.85)] leading-relaxed max-w-lg">
               Deposit plastic waste into a designated bin, snap a clear photo, and upload it here. Our admins verify and reward your eco-actions!
             </p>
           </div>
           {/* Stats */}
-          <div className="flex gap-3 flex-wrap">
-            <div className="stat-box-dark px-6 py-4 text-center min-w-[130px]">
+          <div className="flex gap-3 flex-wrap w-full md:w-auto">
+            <div className="stat-box-dark px-5 sm:px-6 py-4 text-center flex-1 md:flex-none min-w-[130px]">
               <Star className="w-5 h-5 text-[#ffb300] mx-auto mb-1 fill-[#ffb300]" />
               <p className="stat-num">{totalEarned}</p>
               <p className="stat-label">Total Earned</p>
             </div>
-            <div className="stat-box-dark px-6 py-4 text-center min-w-[130px]">
+            <div className="stat-box-dark px-5 sm:px-6 py-4 text-center flex-1 md:flex-none min-w-[130px]">
               <Star className="w-5 h-5 text-green-300 mx-auto mb-1 fill-green-300" />
               <p className="stat-num">{totalPoints}</p>
               <p className="stat-label">Available Balance</p>
@@ -100,10 +100,10 @@ export default function Rewards() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
         {/* Upload Card */}
-        <div className="glass-panel p-8 h-fit">
-          <h2 className="text-2xl font-bold text-[#1a3d1f] mb-6">Upload Evidence</h2>
+        <div className="glass-panel p-6 sm:p-8 h-fit">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#1a3d1f] mb-6">Upload Evidence</h2>
           <form onSubmit={handleUpload} className="space-y-5">
             <label className="block cursor-pointer">
               <div className={`border-2 border-dashed rounded-2xl p-8 text-center transition-all
@@ -143,7 +143,7 @@ export default function Rewards() {
 
         {/* History */}
         <div>
-          <h2 className="text-2xl font-bold text-[#1a3d1f] mb-6">Your History</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-[#1a3d1f] mb-6">Your History</h2>
           <div className="space-y-4">
             {submissions.length === 0 && (
               <div className="glass-panel p-8 text-center">

@@ -58,7 +58,7 @@ function OrderCard({
       {/* Expanded Detail Panel */}
       {isExpanded && (
         <div className="border-t border-[rgba(46,125,50,0.1)] p-4 sm:p-6 space-y-6 bg-[rgba(46,125,50,0.02)]">
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
             {/* Order Items */}
             <div>
@@ -145,7 +145,7 @@ function OrderCard({
               <div>
                 <label className="block text-sm font-bold text-[#2d4a30] mb-1.5">Internal Notes</label>
                 <textarea
-                  rows={2}
+                  rows={3}
                   value={trackNotes}
                   onChange={e => setTrackNotes(e.target.value)}
                   placeholder="e.g. Courier: BlueDart, AWB 123456..."
@@ -423,7 +423,7 @@ export default function AdminDashboard() {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10 fade-in">
+    <div className="max-w-7xl mx-auto px-4 py-8 sm:py-10 fade-in">
       {/* Header */}
       <div className="glass-panel-dark p-6 sm:p-8 mb-8 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/leaves.png')]"></div>
@@ -462,16 +462,16 @@ export default function AdminDashboard() {
 
       {/* ═══ SUBMISSIONS TAB ═══ */}
       {activeTab === 'submissions' && (
-        <div className="glass-panel p-8">
-          <h2 className="text-2xl font-bold text-[#1a3d1f] mb-8 flex items-center gap-2"><Award className="text-[#ffb300] w-6 h-6" /> Waste Verification Queue</h2>
+        <div className="glass-panel p-6 sm:p-8">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#1a3d1f] mb-6 sm:mb-8 flex items-center gap-2"><Award className="text-[#ffb300] w-6 h-6" /> Waste Verification Queue</h2>
           {submissions.length === 0 ? (
             <div className="text-center py-16"><CheckCircle2 className="w-16 h-16 text-[rgba(46,125,50,0.2)] mx-auto mb-4" /><p className="text-[#5f7a60] font-semibold text-lg">All caught up!</p><p className="text-[#5f7a60] text-sm opacity-70">No pending submissions.</p></div>
           ) : (
-            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
               {submissions.map((sub: any) => (
                 <div key={sub.id} className={`glass-card overflow-hidden flex flex-col ${processing === sub.id ? 'opacity-60 pointer-events-none' : ''}`}>
                   <div className="relative">
-                    <img src={sub.image_url} className="w-full h-52 object-cover" alt="Waste" />
+                    <img src={sub.image_url} className="w-full h-44 sm:h-52 object-cover" alt="Waste" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                     <div className="absolute bottom-3 left-3"><span className="text-xs text-white/90 bg-black/30 backdrop-blur-sm px-2 py-1 rounded-lg">{new Date(sub.created_at).toLocaleDateString()}</span></div>
                   </div>
@@ -496,9 +496,9 @@ export default function AdminDashboard() {
 
       {/* ═══ PRODUCTS TAB ═══ */}
       {activeTab === 'products' && (
-        <div className="grid lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-8">
           <div className="lg:col-span-2">
-            <div className="glass-panel p-8 sticky top-24">
+            <div className="glass-panel p-6 sm:p-8 lg:sticky lg:top-24">
               <h2 className="text-xl font-bold text-[#1a3d1f] mb-6 flex items-center gap-2"><Plus className="w-5 h-5 text-[#2e7d32]" /> Add New Product</h2>
               <form onSubmit={handleAddProduct} className="space-y-4">
                 <ImageUploadBox preview={productImagePreview} inputRef={productFileRef} label="Product Image" onFile={f => { setProductImageFile(f); setProductImagePreview(URL.createObjectURL(f)); }} />
@@ -510,7 +510,7 @@ export default function AdminDashboard() {
                   <label className="block text-sm font-bold text-[#2d4a30] mb-1.5">Description</label>
                   <textarea rows={2} value={productForm.description} onChange={e => setProductForm(f => ({ ...f, description: e.target.value }))} className="input-glass resize-none" />
                 </div>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label className="block text-sm font-bold text-[#2d4a30] mb-1.5">Price ($) *</label>
                     <div className="relative"><Tag className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#5f7a60]" /><input required type="number" min="0" step="0.01" value={productForm.price} onChange={e => setProductForm(f => ({ ...f, price: e.target.value }))} placeholder="9.99" className="input-glass pl-10" /></div>
@@ -550,9 +550,9 @@ export default function AdminDashboard() {
 
       {/* ═══ BANNERS TAB ═══ */}
       {activeTab === 'banners' && (
-        <div className="grid lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-8">
           <div className="lg:col-span-2">
-            <div className="glass-panel p-8 sticky top-24">
+            <div className="glass-panel p-6 sm:p-8 lg:sticky lg:top-24">
               <h2 className="text-xl font-bold text-[#1a3d1f] mb-6 flex items-center gap-2"><Megaphone className="w-5 h-5 text-[#2e7d32]" /> Create Banner</h2>
               <form onSubmit={handleAddBanner} className="space-y-4">
                 <ImageUploadBox preview={bannerImagePreview} inputRef={bannerFileRef} label="Banner Image *" onFile={f => { setBannerImageFile(f); setBannerImagePreview(URL.createObjectURL(f)); }} />
@@ -598,9 +598,9 @@ export default function AdminDashboard() {
 
       {/* ═══ EVENTS TAB ═══ */}
       {activeTab === 'events' && (
-        <div className="grid lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-8">
           <div className="lg:col-span-2">
-            <div className="glass-panel p-8 sticky top-24">
+            <div className="glass-panel p-6 sm:p-8 lg:sticky lg:top-24">
               <h2 className="text-xl font-bold text-[#1a3d1f] mb-6 flex items-center gap-2"><Calendar className="w-5 h-5 text-[#2e7d32]" /> Create Event</h2>
               <form onSubmit={handleAddEvent} className="space-y-4">
                 <ImageUploadBox preview={eventImagePreview} inputRef={eventFileRef} label="Event Poster" onFile={f => { setEventImageFile(f); setEventImagePreview(URL.createObjectURL(f)); }} />
@@ -693,7 +693,7 @@ export default function AdminDashboard() {
       {activeTab === 'orders' && (
         <div className="space-y-4">
           <div className="flex items-center justify-between mb-2">
-            <h2 className="text-2xl font-bold text-[#1a3d1f] flex items-center gap-2">
+            <h2 className="text-xl sm:text-2xl font-bold text-[#1a3d1f] flex items-center gap-2">
               <ShoppingBag className="w-6 h-6 text-[#2e7d32]" /> All Orders ({orders.length})
             </h2>
             <span className="text-xs text-[#5f7a60] bg-[rgba(46,125,50,0.06)] border border-[rgba(46,125,50,0.12)] px-3 py-1.5 rounded-xl font-semibold">
@@ -725,8 +725,8 @@ export default function AdminDashboard() {
       {/* ═══ SETTINGS TAB ═══ */}
       {activeTab === 'settings' && (
         <div className="max-w-lg">
-          <div className="glass-panel p-8">
-            <h2 className="text-2xl font-bold text-[#1a3d1f] mb-2 flex items-center gap-2"><Settings className="w-6 h-6 text-[#2e7d32]" /> Platform Settings</h2>
+          <div className="glass-panel p-6 sm:p-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-[#1a3d1f] mb-2 flex items-center gap-2"><Settings className="w-6 h-6 text-[#2e7d32]" /> Platform Settings</h2>
             <p className="text-[#5f7a60] text-sm mb-8">Configure platform-wide settings that affect all users.</p>
             <div className="space-y-6">
               <div className="glass-card p-6 !rounded-2xl">

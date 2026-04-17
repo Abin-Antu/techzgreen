@@ -43,11 +43,11 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="min-h-[88vh] flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen flex items-center justify-center px-4 py-8 sm:py-12">
       <div className="w-full max-w-md">
 
         {/* Brand Mark */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6 sm:mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 shadow-xl relative"
             style={{background: 'linear-gradient(135deg, #1b5e20, #2e7d32)'}}>
             <ShieldCheck className="w-8 h-8 text-white" />
@@ -56,7 +56,7 @@ export default function AdminLogin() {
               ADMIN
             </span>
           </div>
-          <h1 className="text-3xl font-black text-[#1a3d1f]">Admin Portal</h1>
+          <h1 className="text-2xl sm:text-3xl font-black text-[#1a3d1f]">Admin Portal</h1>
           <p className="text-[#5f7a60] mt-1 text-sm">Restricted access — administrators only</p>
         </div>
 
@@ -66,7 +66,7 @@ export default function AdminLogin() {
           <p>This login is exclusively for <strong>admin accounts</strong>. Regular users will be denied access.</p>
         </div>
 
-        <div className="glass-panel p-8 space-y-5">
+        <div className="glass-panel p-6 sm:p-8 space-y-5">
           {error && (
             <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl text-sm font-medium flex items-start gap-2">
               <AlertTriangle className="w-4 h-4 flex-shrink-0 mt-0.5" />
