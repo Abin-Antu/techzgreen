@@ -168,16 +168,22 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+  
     background: rgba(46, 125, 50, 0.1);
-    color: #2e7d32;
+  
+    color: #000000; /* pure black text */
+  
     font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
+    font-weight: 900; /* extra bold (black weight) */
+    font-size: .9rem; /* increased size */
+  
+    letter-spacing: 0.05em; /* slightly tighter for big text */
     text-transform: uppercase;
-    padding: 0.3rem 0.85rem;
+  
+    padding: 0.5rem 1.2rem; /* slightly larger padding */
+  
     border-radius: 999px;
-    border: 1px solid rgba(46, 125, 50, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2); /* match darker text */
   }
 
   .points-badge {

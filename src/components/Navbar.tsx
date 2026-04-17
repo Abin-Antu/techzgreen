@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Leaf, ShoppingCart, LayoutDashboard, LogOut, LogIn, Calendar, Home, Store, Star, Menu, X } from 'lucide-react';
+import { ShoppingCart, LayoutDashboard, LogOut, LogIn, Calendar, Home, Store, Star, Menu, X } from 'lucide-react';
+import favicon from '../assets/favicon.png';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 
@@ -37,10 +38,8 @@ export default function Navbar() {
         <nav className="glass-nav max-w-7xl mx-auto rounded-2xl px-4 sm:px-6">
           <div className="flex justify-between items-center h-14">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 group cursor-pointer">
-              <div className="bg-[#2e7d32] p-1.5 rounded-lg group-hover:bg-[#1b5e20] transition-colors">
-                <Leaf className="h-5 w-5 text-white" />
-              </div>
+            <Link to="/" className="flex items-center gap-2 cursor-pointer">
+              <img src={favicon} alt="TechzGreen icon" className="h-8 w-8 object-contain" />
               <span className="font-black text-lg text-[#1a3d1f] tracking-tight" style={{fontFamily:'Outfit, sans-serif'}}>
                 Techz<span className="text-[#2e7d32]">Green</span>
               </span>
@@ -49,6 +48,7 @@ export default function Navbar() {
             {/* Desktop Nav Links */}
             <div className="hidden sm:flex items-center gap-1">
               <Link to="/" className={linkClass('/')}>Home</Link>
+              <Link to="/about" className={linkClass('/about')}>About</Link>
               <Link to="/shop" className={linkClass('/shop')}>Shop</Link>
               <Link to="/events" className={linkClass('/events')}><span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />Events</span></Link>
               {user && profileRole === 'user' && (

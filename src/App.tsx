@@ -10,8 +10,10 @@ import UserDashboard from './pages/UserDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminLogin from './pages/AdminLogin';
 import Rewards from './pages/Rewards';
+import About from './pages/About';
 import Events from './pages/Events';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import StitchLanding from './stitch-components/StitchLanding';
 
 function App() {
@@ -32,11 +34,13 @@ function App() {
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/rewards" element={<Rewards />} />
+            <Route path="/about" element={<About />} />
             <Route path="/events" element={<Events />} />
             <Route path="/stitch-landing" element={<StitchLanding />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );
