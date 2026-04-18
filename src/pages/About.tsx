@@ -11,22 +11,22 @@ const services = [
   {
     icon: <Recycle className="w-7 h-7 text-[#2e7d32]" />,
     title: 'Recycled Products',
-    desc: 'Our recycled products embody our dedication to sustainability, meticulously crafted from repurposed plastic materials. Each item is a testament to our commitment to environmental consciousness and quality, ensuring durability and functionality while contributing to a greener future. Join us in embracing eco-friendliness and making a positive impact.',
+    desc: 'We manufacture a wide range of eco-friendly products — school benches, tables, furniture, outdoor benches, TV units, roofing sheets, flooring panels, ceiling boards, partitions, and custom items like momentos. All products are waterproof, pest-proof, fungus-resistant, high-density, and long-lasting for both indoor and outdoor use.',
   },
   {
     icon: <Leaf className="w-7 h-7 text-[#2e7d32]" />,
     title: 'Circular Economy',
-    desc: 'At TechzGreen, our circular economy approach redefines plastic\'s lifecycle. We initiate a sustainable loop, recycling plastic waste into new, valuable products. Through our innovative process, we minimize waste, reduce environmental impact, and promote a closed-loop system — fostering sustainability and creating a greener, more responsible future.',
+    desc: 'At TechzGreen, our circular economy approach transforms Multi-Layer Plastic (MLP) and other non-valuable plastic waste into high-quality, durable materials. We close the plastic loop — converting what others discard into products that last decades, minimizing landfill burden and environmental harm.',
   },
   {
     icon: <Droplet className="w-7 h-7 text-[#2e7d32]" />,
     title: 'Sustainable Transformation',
-    desc: 'TechzGreen spearheads sustainable transformation, streamlining plastic recycling for individuals and businesses. Our dedicated efforts simplify the recycling process, contributing to environmental sustainability. With expertise and commitment, we turn plastic waste into purposeful products, paving the way for a greener, more responsible tomorrow.',
+    desc: 'Through innovative recycling and upcycling technologies, we turn plastic waste into a resource. Our process delivers environmental impact, sustainable advertising opportunities, and a cleaner planet — proving that waste and value are not opposites.',
   },
   {
     icon: <Users className="w-7 h-7 text-[#2e7d32]" />,
-    title: 'Community Engagement',
-    desc: 'We actively work with communities, institutions, and organizations to promote awareness about plastic waste management. Our programs encourage responsible disposal and sustainable living — building a collective movement towards a cleaner Kerala and a healthier planet.',
+    title: 'Consultation & Guidance',
+    desc: 'We provide consultation and technical guidance to companies, institutions, and organizations on managing plastic waste more effectively. Our experts help design and implement sustainable waste management systems — turning environmental responsibility into measurable outcomes.',
   },
 ];
 
@@ -47,7 +47,7 @@ export default function About() {
                 </span>
               </h1>
               <p className="text-base sm:text-lg text-[#5f7a60] leading-relaxed max-w-lg">
-                TechzGreen pioneers a greener future by transforming plastic waste into purposeful products, championing sustainability, quality, and innovation in crafting eco-friendly solutions.
+                At TechzGreen, we transform plastic waste — especially Multi-Layer Plastic (MLP) — into durable, valuable products through innovative recycling and upcycling technologies. Waste becomes a resource. Plastic closes the loop.
               </p>
               <Link to="/signup" className="btn-primary inline-flex items-center gap-2">
                 Join the Movement <ArrowRight className="w-4 h-4" />
@@ -95,10 +95,10 @@ export default function About() {
                 Sustainability Pioneers: Transforming Plastic Waste into Purposeful Innovation.
               </h2>
               <p className="text-[#5f7a60] leading-relaxed">
-                TechzGreen stands as a pioneering force in sustainability, dedicated to transforming plastic waste into purposeful innovations. With a commitment to a greener future, we craft eco-friendly solutions that redefine responsible living and environmental stewardship.
+                Our mission is to help industries, institutions, and communities implement effective waste management systems — converting non-valuable plastic waste into high-quality, long-lasting materials. By doing this, we contribute to closing the circular loop of plastic and promoting a sustainable future.
               </p>
               <div className="space-y-2">
-                {['Eco-certified manufacturing process', 'Community-driven recycling programs', 'End-to-end circular economy support', 'Sustainable product innovation'].map(item => (
+                {['MLP & plastic waste recycling & upcycling', 'Waterproof, pest-proof, long-lasting products', 'End-to-end circular economy support', 'Consultation & technical guidance for organizations'].map(item => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-[#2e7d32] flex-shrink-0" />
                     <span className="text-[#2d4a30] text-sm font-medium">{item}</span>
@@ -135,7 +135,7 @@ export default function About() {
             <span className="section-label mb-4 inline-flex"><Leaf className="w-3.5 h-3.5" />A Promise For Future</span>
             <h2 className="text-3xl sm:text-4xl font-black text-[#1a3d1f] mt-4">Welcome to TechzGreen</h2>
             <p className="text-[#5f7a60] mt-3 max-w-2xl mx-auto">
-              At TechzGreen, innovation and sustainability intertwine, shaping eco-friendly solutions. Our mission: transform plastic waste into purposeful products, fostering a circular economy while championing quality and innovation.
+              At TechzGreen, we transform one of today's most challenging waste streams into beautiful, durable, and meaningful products — proving that sustainability and quality are not a compromise.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -145,7 +145,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold text-[#1a3d1f] mb-3">Our Mission</h3>
               <p className="text-[#5f7a60] text-sm leading-relaxed">
-                At TechzGreen, our mission is to pioneer sustainable solutions by transforming plastic waste into purposeful, eco-friendly products — making recycling simple, effective, and rewarding for communities, businesses, and industries across Kerala and beyond, while reducing landfill waste and creating sustainable value today.
+                To help industries, institutions, and communities implement effective waste management systems — converting non-valuable plastic waste into high-quality, long-lasting materials. Through our solutions, waste becomes a resource, creating environmental impact and a cleaner planet for future generations.
               </p>
             </div>
             <div className="glass-card p-6 sm:p-8">
