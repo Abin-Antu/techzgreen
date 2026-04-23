@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Leaf, ShoppingCart, LayoutDashboard, LogOut, LogIn, Calendar, Home, Store, Star, Menu, X } from 'lucide-react';
+import { ShoppingCart, LayoutDashboard, LogOut, LogIn, Calendar, Home, Store, Star, Menu, X } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 
@@ -38,17 +38,16 @@ export default function Navbar() {
           <div className="flex justify-between items-center h-14">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group cursor-pointer">
-              <div className="bg-[#2e7d32] p-1.5 rounded-lg group-hover:bg-[#1b5e20] transition-colors">
-                <Leaf className="h-5 w-5 text-white" />
-              </div>
-              <span className="font-black text-lg text-[#1a3d1f] tracking-tight" style={{fontFamily:'Outfit, sans-serif'}}>
-                Techz<span className="text-[#2e7d32]">Green</span>
+              <img src="/favicon.png" alt="TechzGreen" className="h-8 w-8 rounded-lg object-contain" />
+              <span className="font-black text-lg tracking-tight" style={{fontFamily:'Outfit, sans-serif'}}>
+                <span className="text-[#111111]">Techz</span><span className="text-[#2e7d32]">Green</span>
               </span>
             </Link>
 
             {/* Desktop Nav Links */}
             <div className="hidden sm:flex items-center gap-1">
               <Link to="/" className={linkClass('/')}>Home</Link>
+              <Link to="/about" className={linkClass('/about')}>About</Link>
               <Link to="/shop" className={linkClass('/shop')}>Shop</Link>
               <Link to="/events" className={linkClass('/events')}><span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />Events</span></Link>
               {user && profileRole === 'user' && (
@@ -102,6 +101,7 @@ export default function Navbar() {
           {mobileMenuOpen && (
             <div className="sm:hidden pb-4 pt-2 border-t border-[rgba(46,125,50,0.1)] mt-1 flex flex-col gap-1">
               <Link to="/" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-xl font-semibold text-sm text-[#2d4a30] hover:bg-[rgba(46,125,50,0.08)]">Home</Link>
+              <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-xl font-semibold text-sm text-[#2d4a30] hover:bg-[rgba(46,125,50,0.08)]">About</Link>
               <Link to="/shop" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-xl font-semibold text-sm text-[#2d4a30] hover:bg-[rgba(46,125,50,0.08)]">Shop</Link>
               <Link to="/events" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-xl font-semibold text-sm text-[#2d4a30] hover:bg-[rgba(46,125,50,0.08)]">Events</Link>
               {user && profileRole === 'user' && (

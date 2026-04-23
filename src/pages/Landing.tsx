@@ -222,7 +222,7 @@ export default function Landing() {
                     <h3 className="font-bold text-lg text-[#1a3d1f] mb-1">{product.name}</h3>
                     <p className="text-[#5f7a60] text-sm mb-4 line-clamp-2">{product.description}</p>
                     <div className="flex justify-between items-center">
-                      <span className="font-black text-[#2e7d32] text-lg">${Number(product.price).toFixed(2)}</span>
+                      <span className="font-black text-[#2e7d32] text-lg">₹{Number(product.price).toFixed(2)}</span>
                       <Link to="/shop" className="btn-accent text-sm !py-1.5 !px-4">Shop Now</Link>
                     </div>
                   </div>

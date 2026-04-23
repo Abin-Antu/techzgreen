@@ -79,7 +79,7 @@ export default function Shop() {
                   <p className="text-[#5f7a60] text-sm mb-5 line-clamp-2 flex-grow">{product.description}</p>
                   <div className="flex justify-between items-center pt-4 border-t border-[rgba(46,125,50,0.1)]">
                     <span className="font-black text-[#2e7d32] text-2xl" style={{fontFamily:'Outfit,sans-serif'}}>
-                      ${Number(product.price).toFixed(2)}
+                      ₹{Number(product.price).toFixed(2)}
                     </span>
                     <button
                       onClick={() => addToCart(product)}
